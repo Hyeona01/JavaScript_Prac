@@ -8,19 +8,19 @@ const arr2 = [
 ]
 
 // Q1-1. arr에서 3출력 (Hint:인덱싱은 0부터 시작!)
-
+console.log(arr[2]);
 
 
 // Q1-2. arr에서 [1,2,3]출력 (Hint:Array.js에서 slice함수를 사용해볼까요?)
-
+console.log(arr.slice(0,3));
 
 
 // Q1-3. arr2에서 [8, 9]출력 (Hint:배열 안에 원소가 배열일 뿐!)
-
+console.log(arr2[2]);
 
 
 // Q1-4. arr2에서 [4, 5, 6]출력 (Hint:원소안 원소!)
-
+console.log(arr2[1][2]);
 
 
 
@@ -68,19 +68,19 @@ const obj = {
 }
 
 // Q2-1. 서희찬의 나이를 obj객체로부터 출력하기 (Hint:obj.~~)
-
+console.log("서희찬 나이 : " + obj.age)
 
 
 // Q2-2. 서희찬의 Computer 학점(A+)을 obj객체로부터 출력하기
-
+console.log("서희찬 Computer 학점 : " + obj.gpa.Computer)
 
 
 // Q2-3. 서희찬의 친구인 밥준서의 나이(21)를 obj객체로부터 출력하기 (Hint:obj안에 배열)
-
+console.log("밥준서 나이 : " + obj.friends[0].age)
 
 
 // Q2-4. 서희찬의 친구인 슬기요미가 수강한 강의 중에서 "인강공학"을 obj객체로부터 출력하기
-
+console.log("슬기요미!♥ 강의 : "+obj.friends[1].lecture[1][2])
 
 
 
@@ -97,11 +97,11 @@ const arr3 = [1,2,3,4,5,6];
 
 
 // Q3-1. map함수와 arr3을 활용하여 [10,20,30,40,50,60]을 출력하시오.
-
+console.log(arr3.map(value => value = value * 10))
 
 
 // Q3-2. filter함수와 arr3을 활용하여 [1,3,5]출력하기 (Hint:홀수와 짝수 구분은 "%2"를 활용)
-
+console.log(arr3.filter(value => (value % 2 === 1)))
 
 
 
@@ -128,14 +128,21 @@ console.log(isLeap(2021));  -> 윤년이 아닙니다.
 */
 
 
+function isLeap(year){
+    if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)){
+        return "윤년이 맞습니다.";
+    }
+    else{
+        return "윤년이 아닙니다.";
+    }
+}
 
-// console.log(isLeap(2020));  <- 다 풀고 주석 풀어주세요!
-// console.log(isLeap(2021));  <- 다 풀고 주석 풀어주세요!
+console.log(isLeap(2000));  
+console.log(isLeap(2021));  
+
 
 
 console.log("======= 문제 구분선 =======");
-
-
 
 
 
@@ -152,11 +159,16 @@ console.log("Q5 반복문 연습문제1");
 */
 
 
+str1="";
+for(let i=1; i<=5;i++){
+    str1+="*".repeat(i);
+    str1+="\n";
+}
+console.log(str1)
 
 
 
 console.log("======= 문제 구분선 =======");
-
 
 
 
@@ -173,10 +185,17 @@ console.log("Q6 반복문 연습문제2");
 */
 
 
+str2="";
+for(let i=1; i<=5;i++){
+    str2+=" ".repeat(5-i);
+    str2+="*".repeat(i);
+    str2+="\n";
+}
+console.log(str2)
+
 
 
 console.log("======= 문제 구분선 =======");
-
 
 
 
@@ -193,10 +212,17 @@ console.log("Q7 반복문 연습문제3");
 */
 
 
+str3="";
+for(let i=1; i<=9;i+=2){
+    str3+=" ".repeat((9-i)/2);
+    str3+="*".repeat(i);
+    str3+="\n";
+    }
+console.log(str3)
+
 
 
 console.log("======= 문제 구분선 =======");
-
 
 
 
@@ -218,5 +244,16 @@ console.log("Q8 반복문 연습문제4");
 */
 
 
+str4="";
+for(let i=1; i<=9;i+=2){
+    str4+=" ".repeat((9-i)/2);
+    str4+="*".repeat(i);
+    str4+="\n";
+    }
+for(let i=7; i>=1;i-=2){
+    str4+=" ".repeat((9-i)/2);
+    str4+="*".repeat(i);
+    str4+="\n";
+    }
 
-
+console.log(str4)
