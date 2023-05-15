@@ -68,19 +68,19 @@ const obj = {
 }
 
 // Q2-1. 서희찬의 나이를 obj객체로부터 출력하기 (Hint:obj.~~)
-console.log("서희찬 나이 : " + obj.age)
+console.log("서희찬님 나이 : " + obj.age)
 
 
 // Q2-2. 서희찬의 Computer 학점(A+)을 obj객체로부터 출력하기
-console.log("서희찬 Computer 학점 : " + obj.gpa.Computer)
+console.log("서희찬님 Computer 학점 : " + obj.gpa.Computer)
 
 
 // Q2-3. 서희찬의 친구인 밥준서의 나이(21)를 obj객체로부터 출력하기 (Hint:obj안에 배열)
-console.log("밥준서 나이 : " + obj.friends[0].age)
+console.log("밥준서님 나이 : " + obj.friends[0].age)
 
 
 // Q2-4. 서희찬의 친구인 슬기요미가 수강한 강의 중에서 "인강공학"을 obj객체로부터 출력하기
-console.log("슬기요미!♥ 강의 : "+obj.friends[1].lecture[1][2])
+console.log("슬기요미! 강의 : "+obj.friends[1].lecture[1][2])
 
 
 
